@@ -1,0 +1,272 @@
+[
+  {
+    "impl": "scratch",
+    "mode": "cbow",
+    "dim": 50,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 15.5,
+    "final_loss": 4.1563
+  },
+  {
+    "impl": "scratch",
+    "mode": "skipgram",
+    "dim": 50,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 44.95,
+    "final_loss": 2.4818
+  },
+  {
+    "impl": "scratch",
+    "mode": "cbow",
+    "dim": 100,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 15.97,
+    "final_loss": 4.1529
+  },
+  {
+    "impl": "scratch",
+    "mode": "skipgram",
+    "dim": 100,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 66.77,
+    "final_loss": 2.2255
+  },
+  {
+    "impl": "scratch",
+    "mode": "cbow",
+    "dim": 200,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 25.78,
+    "final_loss": 3.3931
+  },
+  {
+    "impl": "scratch",
+    "mode": "skipgram",
+    "dim": 200,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 122.51,
+    "final_loss": 2.4979
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 50,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.26,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 50,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.47,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 50,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.28,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 50,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.62,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 50,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.22,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 50,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.51,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 50,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.31,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 50,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.83,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 100,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.26,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 100,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.38,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 100,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.26,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 100,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.57,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 100,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.26,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 100,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.48,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 100,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.28,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 100,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.77,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 200,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.28,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 200,
+    "window": 3,
+    "neg": 5,
+    "train_time_s": 0.42,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 200,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.3,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 200,
+    "window": 3,
+    "neg": 10,
+    "train_time_s": 0.64,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 200,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.28,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 200,
+    "window": 5,
+    "neg": 5,
+    "train_time_s": 0.59,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "cbow",
+    "dim": 200,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.3,
+    "vocab_size": 1563
+  },
+  {
+    "impl": "gensim (reference)",
+    "mode": "skipgram",
+    "dim": 200,
+    "window": 5,
+    "neg": 10,
+    "train_time_s": 0.93,
+    "vocab_size": 1563
+  }
+]

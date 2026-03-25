@@ -1,0 +1,118 @@
+# ============================================================
+# CSL 7640 Assignment 2 — Setup & Run Instructions
+# Tested on Windows 11 with Python 3.11 in VS Code
+# ============================================================
+
+
+# ── Step 1: Create and activate a virtual environment ────────────────────────
+# Open VS Code, navigate to the assignment root folder, then open a terminal.
+
+python -m venv .venv
+
+# If you get a script execution error on Windows, run this once:
+#   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+.\.venv\Scripts\Activate.ps1
+
+# You should see (.venv) at the start of your terminal prompt.
+
+# Tell VS Code to use this interpreter:
+#   Ctrl+Shift+P → "Python: Select Interpreter" → pick ".venv"
+
+
+# ── Step 2: Install dependencies ─────────────────────────────────────────────
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# PyTorch note: the requirements.txt installs the CPU-only build.
+# If you have an NVIDIA GPU and want CUDA support, replace the torch
+# line with whichever build matches your CUDA version from pytorch.org.
+
+
+# ── Step 3: Run Problem 1 ─────────────────────────────────────────────────────
+# Tasks must run in order — each one saves files that the next one reads.
+
+cd problem1
+
+# Task 1: scrape web pages + extract PDFs → builds cleaned corpus
+# This takes 15–30 minutes depending on your internet speed.
+# Watch the terminal for live progress (page counter).
+python task1_corpus.py
+
+# Task 2: train CBOW and Skip-gram (gensim + scratch)
+# Gensim training is fast (~2 min). Scratch training takes longer (~10 min).
+python task2_train.py
+
+# Task 3: nearest neighbours and analogy experiments
+python task3_analysis.py
+
+# Task 4: PCA, t-SNE, loss curve visualisations
+python task4_visualize.py
+
+cd ..
+
+
+# ── Step 4: Run Problem 2 ─────────────────────────────────────────────────────
+cd problem2
+
+# Generate TrainingNames.txt (runs instantly)
+python generate_names.py
+
+# Train all three models — expect 5–20 minutes on CPU
+python train.py
+
+# Generate names from trained checkpoints
+python generate.py
+
+# Evaluate and produce plots
+python evaluate.py
+
+cd ..
+
+
+# ── Output locations ──────────────────────────────────────────────────────────
+# Problem 1:
+#   problem1/corpus/cleaned_corpus.txt       ← cleaned corpus 
+#   problem1/outputs/wordcloud.png
+#   problem1/outputs/corpus_stats.json
+#   problem1/outputs/training_results.json
+#   problem1/outputs/semantic_analysis.txt
+#   problem1/outputs/embedding_pca.png
+#   problem1/outputs/embedding_tsne.png
+#   problem1/outputs/loss_curves.png
+#   problem1/outputs/scratch_pca.png
+#   problem1/models/gensim_cbow_d100_w5_n5.model   ← best CBOW model
+#   problem1/models/gensim_sg_d100_w5_n5.model     ← best Skip-gram model
+#
+# Problem 2:
+#   problem2/TrainingNames.txt
+#   problem2/checkpoints/vanilla_rnn_best.pt
+#   problem2/checkpoints/blstm_best.pt
+#   problem2/checkpoints/attention_rnn_best.pt
+#   problem2/outputs/vanilla_rnn_names.txt
+#   problem2/outputs/blstm_names.txt
+#   problem2/outputs/attention_rnn_names.txt
+#   problem2/outputs/evaluation_report.txt
+#   problem2/outputs/metrics_comparison.png
+#   problem2/outputs/length_histogram.png
+#   problem2/outputs/training_loss.png
+
+
+# ── Troubleshooting ───────────────────────────────────────────────────────────
+#
+# "ModuleNotFoundError": make sure (.venv) is active and you ran pip install.
+#
+# task1 finishes but corpus is tiny:
+#   The IITJ website may have blocked the crawler. Try reducing DELAY_SEC
+#   or add a manual wait. The PDF text alone is still valid for the assignment.
+#
+# task2 scratch training is very slow:
+#   Normal — pure NumPy on a large corpus takes time. You can reduce MAX_PAGES
+#   in task1_corpus.py (e.g. to 100) or reduce epochs in task2_train.py (e.g. to 1).
+#
+# task4 t-SNE raises "perplexity must be < n_samples":
+#   This means too few words from WORD_GROUPS were found in the model vocab.
+#   Add more words to WORD_GROUPS in task4_visualize.py or use PCA only.
+#
+# torch not found in Problem 2:
+#   Make sure you installed requirements.txt inside the venv, not globally.

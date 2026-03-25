@@ -1,0 +1,35 @@
+{
+  "vanilla_rnn": {
+    "total_generated": 200,
+    "novelty_rate": 0.995,
+    "diversity": 1.0,
+    "avg_length": 15.04,
+    "failure_modes": {
+      "too_short_count": 0,
+      "too_long_count": 0,
+      "repetitive_count": 0
+    }
+  },
+  "blstm": {
+    "total_generated": 200,
+    "novelty_rate": 1.0,
+    "diversity": 1.0,
+    "avg_length": 9.5,
+    "failure_modes": {
+      "too_short_count": 0,
+      "too_long_count": 0,
+      "repetitive_count": 1
+    }
+  },
+  "attention_rnn": {
+    "total_generated": 200,
+    "novelty_rate": 1.0,
+    "diversity": 1.0,
+    "avg_length": 13.03,
+    "failure_modes": {
+      "too_short_count": 0,
+      "too_long_count": 0,
+      "repetitive_count": 0
+    }
+  }
+}

@@ -1,0 +1,81 @@
+============================================================
+QUANTITATIVE EVALUATION
+============================================================
+
+  Model: vanilla_rnn
+    Total generated : 200
+    Novelty Rate    : 99.5%
+    Diversity       : 100.0%
+    Avg name length : 15.0 chars
+    Too short (<3)  : 0
+    Too long  (>30) : 0
+    Repetitive      : 0
+
+    Samples:
+      Ravinder Roy
+      Sanjeya
+      Sujata Mosh
+      Sandeya Jripathi
+      Vimala Sen
+      Nakash Kajil
+      Kuranjit Kripanh
+      Anil Prashdrt
+      Swaruv Bhatia
+      Anjit Kupalkri
+      Rajindes Roo
+      Malita Smary
+      Amjinder Jasmita Rupan
+      Sumathi Saxena
+      Gaurav B. Saxena
+
+  Model: blstm
+    Total generated : 200
+    Novelty Rate    : 100.0%
+    Diversity       : 100.0%
+    Avg name length : 9.5 chars
+    Too short (<3)  : 0
+    Too long  (>30) : 0
+    Repetitive      : 1
+
+    Samples:
+      Dgadudup
+      Muyy Jwidd
+      Ddrmoyur
+      Viyay G. Uran
+      Yyuull Kga
+      Jojayryy
+      Gewwiwwa
+      Gagooyermy
+      Dwuvidy Jal
+      Widddoyy
+      Duvija Amok
+      Luvidduu
+      Nddwyyv Ddid
+      Moyyyyi
+      Dddy Ril. G. Duprj
+
+  Model: attention_rnn
+    Total generated : 200
+    Novelty Rate    : 100.0%
+    Diversity       : 100.0%
+    Avg name length : 13.0 chars
+    Too short (<3)  : 0
+    Too long  (>30) : 0
+    Repetitive      : 0
+
+    Samples:
+      Ramit Nandey
+      Dhan V. Rupha
+      Savti Rutha C.Oker
+      Sunat Geyl
+      Arina Kolter
+      Trurash M. Ten
+      Kamit S.Nil
+      Reshaj Rotethi
+      Pradhi B. Marit
+      Sanilh
+      Tamresh Pildut R. Pisha
+      Sanir Kotha
+      Rishra Bhopata
+      Pesha K.Ar
+      Samet Shika

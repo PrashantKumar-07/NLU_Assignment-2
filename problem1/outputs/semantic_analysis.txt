@@ -1,0 +1,268 @@
+=================================================================
+NEAREST NEIGHBOURS  (top-5, cosine similarity)
+=================================================================
+
+  Query word: 'research'
+    Scratch CBOW:
+      student                      0.9975
+      engineering                  0.9975
+      degree                       0.9975
+      cgpa                         0.9974
+      academic                     0.9974
+    Scratch Skip-gram:
+      proposal                     0.6830
+      src                          0.6381
+      evaluated                    0.6047
+      journals                     0.5944
+      presentation                 0.5935
+    Gensim CBOW (ref):
+      suraj                        0.9964
+      education                    0.9924
+      foundation                   0.9912
+      expertise                    0.9908
+      agarwal                      0.9894
+
+  Query word: 'student'
+    Scratch CBOW:
+      program                      0.9990
+      credits                      0.9988
+      academic                     0.9988
+      phd                          0.9987
+      course                       0.9986
+    Scratch Skip-gram:
+      reason                       0.8081
+      unless                       0.8076
+      spend                        0.8004
+      ground                       0.7962
+      grounds                      0.7925
+    Gensim CBOW (ref):
+      course                       0.9960
+      registered                   0.9958
+      semester                     0.9949
+      maximum                      0.9928
+      may                          0.9909
+
+  Query word: 'phd'
+    Scratch CBOW:
+      program                      0.9989
+      degree                       0.9988
+      course                       0.9987
+      student                      0.9987
+      engineering                  0.9986
+    Scratch Skip-gram:
+      extension                    0.7302
+      joined                       0.7224
+      deadline                     0.7069
+      july                         0.6858
+      empanelment                  0.6768
+    Gensim CBOW (ref):
+      program                      0.9848
+      programme                    0.9801
+      courses                      0.9800
+      credit                       0.9783
+      categories                   0.9770
+
+  Query word: 'exam'
+    Scratch CBOW:
+      permissible                  0.9515
+      letter                       0.9502
+      campus                       0.9495
+      approval                     0.9487
+      independent                  0.9487
+    Scratch Skip-gram:
+      officer                      0.9519
+      doctors                      0.9437
+      hostels                      0.9418
+      proceed                      0.9412
+      hospital                     0.9117
+    Gensim CBOW (ref):
+      classes                      0.9924
+      available                    0.9923
+      residing                     0.9923
+      best                         0.9922
+      every                        0.9921
+
+  Query word: 'faculty'
+    Scratch CBOW:
+      program                      0.9935
+      phd                          0.9934
+      grade                        0.9932
+      major                        0.9931
+      continuation                 0.9930
+    Scratch Skip-gram:
+      coordinator                  0.8349
+      topic                        0.8142
+      supervising                  0.7967
+      interest                     0.7866
+      conducts                     0.7840
+    Gensim CBOW (ref):
+      members                      0.9969
+      document                     0.9960
+      working                      0.9957
+      reserves                     0.9957
+      mechanism                    0.9957
+
+=================================================================
+ANALOGY EXPERIMENTS  (a : b :: c : ?  via 3CosAdd)
+=================================================================
+
+  UG : BTECH :: PG : ?
+    Scratch CBOW:
+      technology                   0.9939
+      phd                          0.9933
+      duration                     0.9932
+      program                      0.9932
+      regular                      0.9931
+      -> top answer: 'technology'
+    Scratch Skip-gram:
+      transition                   0.8295
+      plan                         0.8212
+      sse                          0.7748
+      bsc                          0.7691
+      civil                        0.7537
+      -> top answer: 'transition'
+    Gensim CBOW (ref):
+      science                      0.9875
+      bsc                          0.9863
+      dual                         0.9862
+      degree                       0.9818
+      discipline                   0.9795
+      -> top answer: 'science'
+
+  LECTURE : PROFESSOR :: LABORATORY : ?
+    Scratch CBOW:
+      drc                          0.9797
+      graduation                   0.9797
+      per                          0.9795
+      committee                    0.9795
+      executive                    0.9794
+      -> top answer: 'drc'
+    Scratch Skip-gram:
+      psychology                   0.8451
+      linguistics                  0.8440
+      associate                    0.8387
+      literature                   0.8303
+      sociology                    0.7985
+      -> top answer: 'psychology'
+    Gensim CBOW (ref):
+      curriculum                   0.9970
+      opportunity                  0.9968
+      departments                  0.9966
+      application                  0.9964
+      empanelment                  0.9959
+      -> top answer: 'curriculum'
+
+  SEMESTER : EXAMINATION :: YEAR : ?
+    Scratch CBOW:
+      programmes                   0.9934
+      dual                         0.9932
+      course                       0.9930
+      academic                     0.9928
+      drc                          0.9928
+      -> top answer: 'programmes'
+    Scratch Skip-gram:
+      breadth                      0.5376
+      general                      0.5303
+      joint                        0.5148
+      test                         0.5103
+      doctoral                     0.5061
+      -> top answer: 'breadth'
+    Gensim CBOW (ref):
+      also                         0.9937
+      years                        0.9936
+      award                        0.9929
+      conditions                   0.9928
+      related                      0.9924
+      -> top answer: 'also'
+
+  MTECH : THESIS :: BTECH : ?
+    Scratch CBOW:
+      drc                          0.9949
+      student                      0.9947
+      students                     0.9945
+      phd                          0.9945
+      program                      0.9945
+      -> top answer: 'drc'
+    Scratch Skip-gram:
+      defend                       0.7922
+      accepted                     0.7695
+      examiners                    0.7652
+      defense                      0.7612
+      hold                         0.7472
+      -> top answer: 'defend'
+    Gensim CBOW (ref):
+      member                       0.9887
+      convener                     0.9875
+      examiners                    0.9871
+      recommended                  0.9870
+      composition                  0.9867
+      -> top answer: 'member'
+
+  RESEARCH : PHD :: TEACHING : ?
+    Scratch CBOW:
+      course                       0.9947
+      technology                   0.9947
+      program                      0.9946
+      credits                      0.9944
+      degree                       0.9944
+      -> top answer: 'course'
+    Scratch Skip-gram:
+      domains                      0.5446
+      etc                          0.5439
+      practical                    0.5350
+      process                      0.5307
+      discussion                   0.5182
+      -> top answer: 'domains'
+    Gensim CBOW (ref):
+      credit                       0.9554
+      regular                      0.9433
+      credits                      0.9387
+      categories                   0.9367
+      earned                       0.9362
+      -> top answer: 'credit'
+
+  PROFESSOR : DEPARTMENT :: STUDENT : ?
+    Scratch CBOW:
+      program                      0.9984
+      academic                     0.9983
+      credits                      0.9983
+      iit                          0.9983
+      phd                          0.9982
+      -> top answer: 'program'
+    Scratch Skip-gram:
+      minor                        0.4956
+      examination                  0.4906
+      attendance                   0.4663
+      met                          0.4626
+      completed                    0.4584
+      -> top answer: 'minor'
+    Gensim CBOW (ref):
+      categories                   0.9925
+      regular                      0.9921
+      registered                   0.9913
+      requirements                 0.9910
+      maximum                      0.9888
+      -> top answer: 'categories'
+
+  ADMISSION : UNDERGRADUATE :: REGISTRATION : ?
+    Scratch CBOW:
+      programme                    0.9950
+      student                      0.9948
+      students                     0.9947
+      program                      0.9945
+      may                          0.9945
+      -> top answer: 'programme'
+    Scratch Skip-gram:
+      adding                       0.6667
+      dropping                     0.6346
+      recess                       0.6226
+      fine                         0.6203
+      calendar                     0.6195
+      -> top answer: 'adding'
+    Gensim CBOW (ref):
+      may                          0.9901
+      semester                     0.9890
+      academic                     0.9889
+      end                          0.9879
+      semesters                    0.9875
+      -> top answer: 'may'
